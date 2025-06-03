@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-backend
+  template:
+    metadata:
+      labels:
+        app: flask-backend
+    spec:
+      containers:
+      - name: flask-backend
+        image: maverick8266/flask-backend:latest
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: MONGO_URI
+        - name: MONGO_DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-config
+              key: MONGO_DB_NAME
+        - name: MONGO_COLLECTION_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-config
+              key: MONGO_COLLECTION_NAME

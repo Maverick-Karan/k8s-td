@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  MONGO_DB_NAME: flaskDB
+  MONGO_COLLECTION_NAME: k8s_form
