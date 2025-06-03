@@ -6,15 +6,24 @@ docker build -t express-frontend ./frontend
 
 ![Screenshot From 2025-06-03 12-08-03](https://github.com/user-attachments/assets/927cacb9-6a0d-4bc6-b7ff-dcb43058f990)
 
-<pre> ## 🏷️ Tag Docker Images Tag your Docker images before pushing to Docker Hub: ```bash docker tag express-frontend:latest maverick8266/express-frontend:latest docker tag flask-backend:latest maverick8266/flask-backend:latest ``` </pre>
+Tag Docker Images  
+docker tag express-frontend:latest maverick8266/express-frontend:latest  
+docker tag flask-backend:latest maverick8266/flask-backend:latest  
+
 ![Screenshot From 2025-06-03 13-21-21](https://github.com/user-attachments/assets/c3d28d94-51d8-4358-8d11-f6a541c6327f)
 
-<pre> ## 📦 Push Docker Images to Docker Hub After tagging, push your Docker images to Docker Hub: ```bash docker push maverick8266/express-frontend:latest docker push maverick8266/flask-backend:latest ``` </pre>
+Push Docker Images to Docker Hub  
+docker push maverick8266/express-frontend:latest  
+docker push maverick8266/flask-backend:latest  
+
 
 ![Screenshot From 2025-06-03 13-21-45](https://github.com/user-attachments/assets/8ffe99e7-788d-4095-b137-8479b2e1c37f)
 
 
-<pre> ## 🚀 Start Minikube and Deploy to Namespace Start your Minikube cluster and apply your Kubernetes manifests to a custom namespace (`k8s-td`): ```bash minikube start kubectl apply -f k8s/ -n k8s-td ``` </pre>
+Start Minikube and Deploy to Namespace  
+minikube start  
+kubectl apply -f k8s/ -n k8s-td  
+
 ![Screenshot From 2025-06-03 12-15-03](https://github.com/user-attachments/assets/84142e16-f660-4fcd-9cde-7038aa5dd83f)
 
 Created k8s :
