@@ -1,6 +1,6 @@
 # k8s-td
 
-🛠️ Build Docker Images Build frontend and backend Docker images: ```docker build -t flask-backend ./backend docker build -t express-frontend ./frontend ```
+🛠️ Build Docker Images Build frontend and backend Docker images: ```docker build -t flask-backend ./backend``` ```docker build -t express-frontend ./frontend ```
 ![Screenshot From 2025-06-03 12-08-03](https://github.com/user-attachments/assets/927cacb9-6a0d-4bc6-b7ff-dcb43058f990)
 
 <pre> ## 🏷️ Tag Docker Images Tag your Docker images before pushing to Docker Hub: ```bash docker tag express-frontend:latest maverick8266/express-frontend:latest docker tag flask-backend:latest maverick8266/flask-backend:latest ``` </pre>
